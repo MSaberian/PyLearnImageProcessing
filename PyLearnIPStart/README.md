@@ -1,17 +1,14 @@
-# PyLearn SQL
+# Image Processing Start
 
-This repository include SQL projects.
+This project include using OpenCV:
+Convert color image to gray (main.py)
+Cut and paste part of image (main.py)
+Make a chess board (chess_board.py)
+Invert dark and light colors (inverter.py)
+Rotate image (rotater.py)
+Design 'M' character (m_character.py)
+Generate a gradient (gradient.py)
+Add a black tape (death symbol) to an image (black_tape.py).
 
-<<<<<<< HEAD
-## SQL
-=======
-## SQL Start
-
-This SQL project include create dataset of customers and products of a online shop.
->>>>>>> 60c6f69e162cfc30584899f9851da8640fa0eb85
-
-the project includes INSERT, SELECT, DELETE and UPDATE commands.
-
-## SQL Shop
-
-This SQL project include create dataset of customers and products of a online shop.
+![chess_board](https://user-images.githubusercontent.com/43343453/226928594-cf8cf850-84ac-4a5d-93eb-602927c39b7a.png)
+![Mona_Lisa_2](https://user-images.githubusercontent.com/43343453/226928611-38fd0e91-4f04-4ca0-be66-278135a27a8d.jpg)
