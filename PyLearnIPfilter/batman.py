@@ -5,8 +5,8 @@ image_org = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 
 # cv2.imshow('result',image_org[250:350,300:700])
 
-_, image_thre = cv2.threshold(image_org, 140, 255, cv2.THRESH_BINARY_INV)
-# cv2.imshow('threshold 140',image)
+_, image_thre = cv2.threshold(image_org, 135, 255, cv2.THRESH_BINARY_INV)
+# cv2.imshow('threshold 135',image)
 
 _, image = cv2.threshold(image_org, 175, 255, cv2.THRESH_BINARY_INV)
 # cv2.imshow('threshold 175',image[250:350,300:700])
