@@ -2,11 +2,11 @@ import time
 import cv2
 import numpy as np
 
-TV_image = cv2.imread('old_TV.jpg')
+TV_image = cv2.imread('media\old_TV.jpg')
 TV_image = cv2.cvtColor(TV_image,cv2.COLOR_BGR2GRAY)
 rows, cols = TV_image.shape
 _, TV_image_thre = cv2.threshold(TV_image, 250, 255, cv2.THRESH_BINARY)
-writer = cv2.VideoWriter("TV_noise.mp4", cv2.VideoWriter_fourcc(*'XVID'), 40, (cols, rows))
+writer = cv2.VideoWriter("media\TV_noise.mp4", cv2.VideoWriter_fourcc(*'XVID'), 40, (cols, rows))
 
 while True:
     noise = np.random.random((230, 300)) * 255

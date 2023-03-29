@@ -1,6 +1,6 @@
 import cv2
 
-image = cv2.imread('bat.jpg')
+image = cv2.imread('media\Bat.jpg')
 image_org = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 
 # cv2.imshow('result',image_org[250:350,300:700])
@@ -19,7 +19,7 @@ image_bat = image_thre
 image_bat[250:350,400:600] = image_denoise[250:350,400:600]
 cv2.putText(image_bat, 'BATMAN', (300, 550), cv2.FONT_HERSHEY_SIMPLEX, 3, 255, thickness= 5)
 cv2.imshow('image_bat',image_bat)
-cv2.imwrite('batman.jpg',image_bat)
+cv2.imwrite('media\Batman.jpg',image_bat)
 cv2.waitKey()
 
 
