@@ -1,15 +1,16 @@
-# Image Processing Start
+# Image Processing filter
 
 This project include using OpenCV:
-Convert color image to gray (main.py)
-Cut and paste part of image (main.py)
-Make a chess board (chess_board.py)
-Invert dark and light colors (inverter.py)
-Rotate image (rotater.py)
-Design 'M' character (m_character.py)
-Generate a gradient (gradient.py)
-Add a black tape (death symbol) to an image (black_tape.py).
 
-![chess_board](https://user-images.githubusercontent.com/43343453/226928594-cf8cf850-84ac-4a5d-93eb-602927c39b7a.png)
-![Mona_Lisa_resized](https://user-images.githubusercontent.com/43343453/226939802-f01f11f2-49cd-44f2-b88f-284b28eb34d8.jpg)
+Make the batman logo from a image of a bat. (batman.py)
 
+![Bat](https://user-images.githubusercontent.com/43343453/228598455-fe96be91-787b-4112-9d05-6671814fc037.jpg)
+![batman](https://user-images.githubusercontent.com/43343453/228598443-d181e52e-973a-4b0d-9e1d-003d3efb4861.jpg)
+
+Make a TV noise (TV_noise.py)
+
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/43343453/228600093-ddd576b8-7c97-4463-985f-b55603ce2fae.gif)
+
+Make a landscape with snowfall (landscape_snow.py)
+
+![landscape_snow](https://user-images.githubusercontent.com/43343453/228598900-e687ade4-97a1-48d9-815b-f9cac9a62a2c.gif)
