@@ -15,3 +15,7 @@ Make a TV noise (TV_noise.py)
 Make a landscape with snowfall (landscape_snow.py)
 
 ![landscape_snow](https://user-images.githubusercontent.com/43343453/228598900-e687ade4-97a1-48d9-815b-f9cac9a62a2c.gif)
+
+Color detector using webcam (vebcam.py)
+
+![camera](https://user-images.githubusercontent.com/43343453/228923829-4d28654a-bb0e-499f-9ac9-edcc37c336fe.gif)
