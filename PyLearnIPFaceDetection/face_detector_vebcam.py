@@ -81,15 +81,14 @@ def mirror(image):
     return image
 
 
-image_sticker_emoji = cv2.imread('media\emoji4.png')
+image_sticker_emoji = cv2.imread('input\emoji4.png')
 image_sticker_emoji = cv2.resize(image_sticker_emoji, (image_sticker_emoji.shape[0]//8,image_sticker_emoji.shape[1]//6))
 image_sticker_emoji_ghost, image_sticker_emoji_transparent = transparent_sticker(image_sticker_emoji)
 
-image_glass = cv2.imread('media\glass5.jpg')
+image_glass = cv2.imread('input\glass5.jpg')
 image_glass_ghost, image_glass_transparent = transparent_sticker(image_glass)
 
-image_smile = cv2.imread('media\smile3.jpg')
-# image_smile = cv2.resize(image_smile, (image_smile.shape[0]//20,image_smile.shape[1]//20))
+image_smile = cv2.imread('input\smile3.jpg')
 image_smile_ghost, image_smile_transparent = transparent_sticker(image_smile)
 
 face_datector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
@@ -99,7 +98,7 @@ smaile_datector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_smi
 cap = cv2.VideoCapture(0)
 _, frame = cap.read()
 rows, cols, _ = frame.shape
-writer = cv2.VideoWriter('media\mamad.mp4', cv2.VideoWriter_fourcc(*'MJPG'), 8, (cols, rows))
+writer = cv2.VideoWriter('output\mamad.mp4', cv2.VideoWriter_fourcc(*'MJPG'), 8, (cols, rows))
 
 choice = 1
 
