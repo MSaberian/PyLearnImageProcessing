@@ -6,7 +6,7 @@ width = 400
 lenght = 700
 football_pitch_image = np.ones((width,lenght,3))
 football_pitch_image = np.array(football_pitch_image, dtype=np.uint8)
-noise = np.random.random((width, lenght)) * 50
+noise = np.random.random((width, lenght)) * 100
 grass = np.array(noise, dtype=np.uint8)
 
 for i in range(7):
