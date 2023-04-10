@@ -1,21 +1,8 @@
-# Image Face Detection
+# Image Math operation
 
+![mamad_robert](https://user-images.githubusercontent.com/43343453/230965905-f083f0d5-e821-4477-934f-95d7294d1b22.jpg)
 
-A program to open webcam and apply some filters on your face that change with keyboard numbers (face_detector_vebcam.py)
-
-![mamad_gif](https://user-images.githubusercontent.com/43343453/229884938-240aaf54-fe16-455d-84a8-75d3b7d6c3a0.gif)
-
-Draw a football pitch (football_pitch.py)
-
-![Football_pitch](https://user-images.githubusercontent.com/43343453/229878949-1dd58859-137b-4a99-879d-9ed0ec6d4041.jpg)
-
-
-Program for read an image and count number of cats in it (cat_detector.py)
-
-input:
-
-![cat4](https://user-images.githubusercontent.com/43343453/229879037-68ac20bb-b406-4a54-8ace-b74be2bcf055.jpg)
-
-output:
-Cats number in cat4 image is: 3
-
+![mamad_tiger](https://user-images.githubusercontent.com/43343453/230965662-c5056b45-cd6e-42bb-aa63-7c79a70d4053.jpg)
+![New_room](https://user-images.githubusercontent.com/43343453/230965673-1772d8f4-810d-4397-9499-565aae2c6ea6.jpg)
+![new_floor](https://user-images.githubusercontent.com/43343453/230965773-4bf3f26e-d6ce-4eec-8d7f-87bebafbe93d.jpg)
+![floor](https://user-images.githubusercontent.com/43343453/230965786-a6f1f2fc-9d18-4727-8324-b16921104beb.jpg)
