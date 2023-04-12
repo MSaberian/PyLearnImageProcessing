@@ -15,3 +15,5 @@ image_black_holes_row_1 = np.concatenate((image_black_holes[2], image_black_hole
 image_black_hole = np.concatenate((image_black_holes_row_0, image_black_holes_row_1), axis=0)
 
 cv2.imwrite('output\image_black_hole.jpg',image_black_hole)
+image_black_hole = cv2.resize(image_black_hole, [image_black_hole.shape[0]//5, image_black_hole.shape[1]//5])
+cv2.imwrite('output\image_black_hole_small.jpg',image_black_hole)
