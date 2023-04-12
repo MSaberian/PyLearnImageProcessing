@@ -35,3 +35,5 @@ mamad_tiger_image = image_mamad*image_tiger_ghost + image_tiger_transparent
 cv2.imwrite('output/image_tiger_transparent.jpg',image_tiger_transparent)
 cv2.imwrite('output/image_tiger_ghost.jpg',image_tiger_ghost*255)
 cv2.imwrite('output/mamad_tiger.jpg',mamad_tiger_image)
+mamad_tiger_image = cv2.resize(mamad_tiger_image, [mamad_tiger_image.shape[0]//2, mamad_tiger_image.shape[1]//2])
+cv2.imwrite('output\mamad_tiger_image_small.jpg',mamad_tiger_image)
