@@ -1,69 +1,106 @@
-import numpy as np
+from mtcnn.mtcnn import MTCNN
+import matplotlib.pyplot as plt
 import cv2
-import tensorflow as tf
-from functools import partial
-from TFLiteFaceDetector import UltraLightFaceDetecion
-from TFLiteFaceAlignment import CoordinateAlignmentModel
+from PIL import Image
+import numpy as np
+import math
 
+image_path = "input/3.jpg"
+img = plt.imread(image_path)
+# plt.imshow(img)
+plt.show()
 
-fd = UltraLightFaceDetecion("weights/RFB-320.tflite", conf_threshold=0.88)
-fa = CoordinateAlignmentModel("weights/coor_2d106.tflite")
+face_detector = MTCNN()
 
-f = 1.5
-lips_numbers = [52, 64, 63, 71, 67, 68, 61, 58, 59, 53, 56, 55]
-eyeL_numbers = [35, 41, 40, 42, 39, 37, 33, 36]
-eyeR_numbers = [89, 95, 94, 96, 93, 91, 87, 90]
+# draw an image with detected objects
+def draw_facebox_and_keypoints(filename, result_list):
+    # load the image
+    data = plt.imread(filename)
+    # plot the image
+    plt.imshow(data)
+    # get the context for drawing boxes
+    ax = plt.gca()
+    # plot each box
+    for result in result_list:
+        # get coordinates
+        x, y, width, height = result['box']
+        # create the shape
+        rect = plt.Rectangle((x, y), width, height,fill=False, color='orange')
+        # draw the box
+        ax.add_patch(rect)
+        # draw the dots
+        for key, value in result['keypoints'].items():
+            # create and draw dot
+            dot = plt.Circle(value, radius=2, color='red')
+            ax.add_patch(dot)
+            # show the plot
+    plt.show()# filename = 'test1.jpg' # filename is defined above, otherwise uncomment
 
-def rotate_effect(object_numbers, mamad_image):
-    landmarks = []
-    for i in object_numbers:
-        landmarks.append(pred[i])
-    landmarks = np.array(landmarks, dtype= np.int32)
+results = face_detector.detect_faces(img)
 
-    x, y, w, h = cv2.boundingRect(landmarks)
-    mask = np.zeros(mamad_image.shape, dtype= np.uint8)
-    cv2.drawContours(mask, [landmarks], -1, (1,1,1), -1)
+draw_facebox_and_keypoints(image_path, results)
 
-    mamad_object = mamad_image * mask
-    mamad_object = mamad_object[y:y+h, x:x+w]
-    mask = mask[y:y+h, x:x+w]
+def EuclideanDistance(source_representation, test_representation):
+    euclidean_distance = source_representation - test_representation
+    euclidean_distance = np.sum(np.multiply(euclidean_distance, euclidean_distance))
+    euclidean_distance = np.sqrt(euclidean_distance)
+    return euclidean_distance
 
-    mamad_object_big = cv2.resize(mamad_object, (0, 0), fx=f, fy=f)
-    mask_object_big = cv2.resize(mask, (0, 0), fx=f, fy=f)
+def alignment_procedure(img, left_eye, right_eye):
 
-    mamad_object_big = cv2.flip(mamad_object_big, 0)
-    mask_object_big = cv2.flip(mask_object_big, 0)
-    
-    mamad_object_image = np.zeros(mamad_image.shape, dtype= np.uint8)
-    mask_object_image = np.zeros(mamad_image.shape, dtype= np.uint8)
-    
-    x1 = np.int32(x-(f-1)*w//2)
-    x2 = x1 + mamad_object_big.shape[1]
-    y1 = np.int32(y-(f-1)*h//2)
-    y2 = y1 + mamad_object_big.shape[0]
-    mamad_object_image[y1:y2, x1:x2] = mamad_object_big
-    mask_object_image[y1:y2, x1:x2] = mask_object_big
+    #this function aligns given face in img based on left and right eye coordinates
 
-    mamad_result = mamad_object_image + mamad_image * (1 - mask_object_image)
+    left_eye_x, left_eye_y = left_eye
+    right_eye_x, right_eye_y = right_eye
 
-    return mamad_result
+    #-----------------------
+    #find rotation direction
 
-mamad_image = cv2.imread('input/2.jpg')
+    if left_eye_y > right_eye_y:
+        point_3rd = (right_eye_x, left_eye_y)
+        direction = -1 #rotate same direction to clock
+    else:
+        point_3rd = (left_eye_x, right_eye_y)
+        direction = 1 #rotate inverse direction of clock
 
-boxes, scores = fd.inference(mamad_image)
+    #-----------------------
+    #find length of triangle edges
 
-for pred in fa.get_landmarks(mamad_image, boxes):
-    for i, p in enumerate(np.round(pred).astype(np.int32)):
-        color = (255*(i%3==2), 255*(i%3==0), 255*(i%3==1))
-        # cv2.circle(mamad_image, tuple(p), 2, color, -1)
-        # cv2.putText(mamad_image, str(i), tuple(p), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color)
+    a = EuclideanDistance(np.array(left_eye), np.array(point_3rd))
+    b = EuclideanDistance(np.array(right_eye), np.array(point_3rd))
+    c = EuclideanDistance(np.array(right_eye), np.array(left_eye))
 
-mamad_result = rotate_effect(lips_numbers, mamad_image)
-mamad_result = rotate_effect(eyeL_numbers, mamad_result)
-mamad_result = rotate_effect(eyeR_numbers, mamad_result)
+    #-----------------------
 
-mamad_result = cv2.flip(mamad_result, 0)
+    #apply cosine rule
 
-cv2.imshow("mamad result", mamad_result)
-cv2.imwrite('output/mamad rotate result.jpg',mamad_result)
+    if b != 0 and c != 0: #this multiplication causes division by zero in cos_a calculation
+
+        cos_a = (b*b + c*c - a*a)/(2*b*c)
+        angle = np.arccos(cos_a) #angle in radian
+        angle = (angle * 180) / math.pi #radian to degree
+
+        #-----------------------
+        #rotate base image
+
+        if direction == -1:
+            angle = 90 - angle
+
+        img = Image.fromarray(img)
+        img = np.array(img.rotate(direction * angle))
+
+    #-----------------------
+
+    return img #return img anyway
+
+detection = results[0]
+keypoints = detection["keypoints"]
+left_eye = keypoints["left_eye"]
+right_eye = keypoints["right_eye"]
+
+img = alignment_procedure(img, left_eye, right_eye)
+
+plt.imshow(img)
+plt.imsave('output/mamad align result.jpg', img)
+
 cv2.waitKey()
