@@ -14,6 +14,8 @@ I created a filter like Snapchat Filter on my face and a apple.
 
 ## Align Face
 
+I use https://github.com/Alireza-Akhavan/deep-face-recognition/blob/master/7_face-align-with-eyes.ipynb code to align my face.
+
 input:
 ![3](https://user-images.githubusercontent.com/43343453/233782827-a0110b58-8ed4-4ca9-b463-e316bef81e62.jpg)
 
