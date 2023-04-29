@@ -26,8 +26,8 @@ for i in range(FS//2, rows-FS//2):
             else:
                 image_new[i, j] = average
         else:
-            image = cv2.imread('input/flower.jpg', cv2.IMREAD_GRAYSCALE)
-            image = image[500:700,500:700]
+            # image = cv2.imread('input/flower.jpg', cv2.IMREAD_GRAYSCALE)
+            # image = image[500:700,500:700]
             image_new[i, j] = image[i,j]
         
 cv2.imwrite('output/flower_blur4.png',image_new)
