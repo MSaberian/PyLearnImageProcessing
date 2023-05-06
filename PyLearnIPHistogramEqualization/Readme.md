@@ -100,3 +100,28 @@ output:
 
 ![5](https://user-images.githubusercontent.com/43343453/236635603-7ece2f92-5a71-4c4c-8fa4-b98833496177.jpg)
 
+
+## Histogram Equalization
+
+used cv2.equalizeHist() function to Histogram Equalization.
+
+input:
+
+![spaces](https://user-images.githubusercontent.com/43343453/236635754-9ed19913-0339-41c2-899e-c5fcd521f9d9.jpg)
+
+output:
+
+![spaces](https://user-images.githubusercontent.com/43343453/236635778-8b1e1833-4291-4ce3-9b79-9f4fbadde21b.jpg)
+
+input:
+
+![Hawkes_Bay_NZ](https://user-images.githubusercontent.com/43343453/236635771-60a51be8-f126-44ec-a660-67ac7fc28a23.jpg)
+
+output:
+
+![Hawkes_Bay_NZ](https://user-images.githubusercontent.com/43343453/236635853-40939c28-587c-4f87-a352-8745c096d175.jpg)
+
+
+In next images is orginal,  used cv2.equalizeHist()  and cv2.createCLAHE functions to Histogram Equalization, Respectively.
+
+![statue](https://user-images.githubusercontent.com/43343453/236635952-e952e249-d7ce-4199-b7d9-b914d0ea5e7c.jpg)
