@@ -7,7 +7,7 @@ _, frame = cap.read()
 frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 rows, cols = frame.shape
 
-writer = cv2.VideoWriter('media\mamad.mp4', cv2.VideoWriter_fourcc(*'MJPG'), 10, (cols, rows))
+writer = cv2.VideoWriter('output\mamad.mp4', cv2.VideoWriter_fourcc(*'MJPG'), 10, (cols, rows))
 
 while True:
     _, frame_org = cap.read()
