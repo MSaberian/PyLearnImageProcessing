@@ -52,4 +52,10 @@ Equalizes the gray image histogram.
 
 ![histogram gray equalized image](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/1556bbba-12f2-4e72-8be7-ea94d8e4fcc7)
 
+## Image Encryption and Decryption 🔐
+
+
+
+![image_Decryption](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/79fa2c59-b05e-4825-8cd4-6c652847974e)
+
 
