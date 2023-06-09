@@ -17,9 +17,10 @@ Red - Green - Blue - Yellow - Orange - Purple - White - Black
 
 Use mediapipe to detect body landmarks on webcam stream.
 
-![me4](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/f29394be-9728-4023-8cc6-0a281925aca1)
+![me3](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/0e99fc52-102f-4318-a3ba-1b4a98387012)
 
-![me5](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/9f90d4ca-dcbc-4236-bc71-b4c7b28b85b7)
+![me5](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/7a10078d-2db2-4df3-8415-1ab810267975)
+
 
 ## PIL (Python Imaging Library) Don't use OpenCV 
 
