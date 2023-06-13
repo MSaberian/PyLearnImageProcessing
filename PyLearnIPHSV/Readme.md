@@ -1,60 +1,65 @@
-# Supplementary topics
+# HSV color space
 
-## PNG (Portable Network Graphics)
+## Watermelon to Materwelon
 
-Transparent Microsoft logo and remove it's background.
-
-![microsoft](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/01c5dae4-7add-46f5-b0b3-ba5f11303405)
-
-## Color Recognition
-
-Write a program with webcam to recognize these colors:
-Red - Green - Blue - Yellow - Orange - Purple - White - Black
-
-![colorGIF](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/8f15c1b8-092c-4909-b0c4-f02dfa5ee1da)
-
-## MediaPipe
-
-Use mediapipe to detect body landmarks on webcam stream.
-
-![me3](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/0e99fc52-102f-4318-a3ba-1b4a98387012)
-
-![me5](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/7a10078d-2db2-4df3-8415-1ab810267975)
+Watermelon to Materwelon convertor using HSV color space. 🍉
 
 
-## PIL (Python Imaging Library) Don't use OpenCV 
+![Materwelon](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/65214992-84d3-4155-9dfc-e8bba79b7e8c)
 
-Write a persian text on image.
+## Color Recognition with webcam
 
-![orgial image](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/ec12ce22-a724-483b-9a17-309fa32bc9e7)
+Color Recognition with webcam using HSV color space. 🧡💛💚🩵💙💜🤍
 
-Calculate 3 histograms and show with plt.
-
-![histogram orginal image](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/5e2ab845-e25d-40d7-a39c-96a20346545b)
-
-Equalizes the image histogram.
-
-![equalized image](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/6558f208-d213-4fdf-a1bf-9f57b8f8b340)
-
-![histogram equalized image](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/e9bde92e-1d1b-4b7f-b6bc-f68003a70c20)
-
-Convert image to gray.
-
-![gray image](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/e8691731-8e1c-47f1-a80e-6d16606a0cbc)
-
-Calculate histogram and show with plt.
-
-![histogram gray image](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/2520853e-a70e-4496-b098-92c671f69c05)
-
-Equalizes the gray image histogram.
-
-![gray equalized image](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/002d8177-eb85-44b7-9dec-ef063ac27d00)
-
-![histogram gray equalized image](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/1556bbba-12f2-4e72-8be7-ea94d8e4fcc7)
-
-## Image Encryption and Decryption 🔐
+![gif](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/a7fba89c-1136-4790-bf12-684cecd753ef)
 
 
+## Balloons Detection 🎈
 
-![image_Decryption](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/79fa2c59-b05e-4825-8cd4-6c652847974e)
+input:
 
+![ballons](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/5f6c1573-a66d-43e6-a15d-53d93149c627)
+
+output:
+
+![ballons](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/5a671c0e-d5cb-4d2c-a5af-38706b9a7abc)
+
+
+## Skin Detection 👨🏻‍🦲🤚🏻
+
+https://pyimagesearch.com/2014/08/18/skin-detection-step-step-example-using-python-opencv
+
+![skin](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/6c7727fb-68a3-4306-8c27-7db52da250db)
+
+
+## Blue Screen Technique 🟩🟦
+
+input:
+
+![SuperMan](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/ba4c6515-7b27-42e8-b49a-2a2909ab5cc0)
+
+output:
+
+![superman](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/9507c66e-1b4b-4b58-8649-208f2a8e69cc)
+
+## Change your clothes color in a portrait photo of yourself. 👚👕
+
+input:
+
+![me](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/e7a18c71-be6e-4f82-b0bd-2ca30dc97287)
+
+output:
+
+![me](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/bbb3df23-a8aa-460d-8be7-16cd0d86b8b5)
+
+![me2](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/890b2c36-7cc9-4ef9-8ff6-ced8c05950c3)
+
+## Change Spiderman's clothes to green and yellow. 🕷️
+
+input:
+
+![spiderman](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/960db977-65e1-4155-b2f0-4c18c93bd524)
+
+output:
+
+![spiderman](https://github.com/MSaberian/PyLearnImageProcessing/assets/43343453/4fabf0a6-1cfd-4c03-8cdb-e3df2bead3d7)
